@@ -29,6 +29,8 @@ public class Ex1 {
         
         media = calCular(array);
         
+        System.out.println("O valor da media eh:"+media);
+        
    }
     
    
