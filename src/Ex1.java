@@ -1,5 +1,12 @@
 import java.io.*;
 // juntei com exercicio 4
+
+//comentario de documentacao
+/**
+ * 
+ * @author Pais Jose Murama
+ * @author Jose Seie 
+ */
 public class Ex1 {
     public static void main(String[] args) throws IOException {
         char exame=0;
