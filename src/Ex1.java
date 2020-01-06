@@ -1,5 +1,5 @@
 import java.io.*;
-// juntei com exercicio 4
+import java.util.Scanner;
 
 //comentario de documentacao
 /**
@@ -10,84 +10,56 @@ import java.io.*;
 public class Ex1 {
     
     public static void main(String[] args) throws IOException {
+        /**
+         * 1.ler nomes;
+         * 2.ler notas de cada disciplina;
+         * 3. calcular a media;
+         * 4. imprimir;
+         */
+        Scanner s= new Scanner(System.in);
         
-        char exame = 0;
+            int total =2;
+            
+            String nome; 
+            
+            int [] arrayMat;
+            
+            int [] arrayFisc;
+            
+            arrayMat = new int[total];
+            
+            arrayFisc = new int[total];
+            
+            double media[] = new double[total];
+            
+            
+            
         
-        int [] array = new int[10];
+        for(int i=0;i<total;i++){
+            
+            System.out.println("Introduza o nome do "+(i)+" aluno");
         
-        array = criarArray();
+            nome = s.next();
+            
+            System.out.println("Introduza a nota de matematica");
+            arrayMat [i]= s.nextInt();
+            
+            System.out.println("Introduza a nota de Fisica!");
+            arrayFisc[i] = s.nextInt();
+          
+            
+            media[i]= arrayMat[i]*0.7+arrayFisc[i]*0.3;
+             System.out.println("O valor da media eh:"+media[i]);
+            
+           
+        }
         
-        visualizarArray(array);
         
-        int []array2 = new int[10];
         
-        array2 = criarArray2(array);
+        //System.out.println("O valor da media eh:"+media);
         
-         visualizarArray(array2);
-        
-        float media =0;
-        
-        media = calCular(array);
-        
-        System.out.println("O valor da media eh:"+media);
+    }
         
    }
     
    
-    public static int[] criarArray() throws IOException {
-        
-        BufferedReader p = new BufferedReader(new InputStreamReader(System.in));
-        
-        int [] a = new int[10];
-        
-        System.out.println("Introduza numeros inteiros");
-        
-        for(int i=0;i<a.length;i++)
-        {
-            a[i]=Integer.parseInt(p.readLine());
-        }
-        
-       return a; 
-    }
-   
-    // calculo da media
-    public static float calCular(int[] array) {
-        
-        float m = 0;
-        
-        for(int i=0; i < array.length; i++)
-        {
-            m += array[i];
-        }   
-        
-       return m / 10; 
-        
-    }
-
-    public static void visualizarArray(int[] array) {
-       
-        for(int i = 0; i < array.length; i++)
-        {
-            System.out.print(array[i]+";");
-        }
-    }
-
-    public static int[] criarArray2(int[] array) {
-        
-        int [] a = new int [10];
-        
-        for(int i=0; i<a.length; i++)
-        {
-          a[i] = array[i];
-
-        }   
-        
-        return a;
-       
-    }
-    
-    
-}
-    
-    
-
