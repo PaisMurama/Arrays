@@ -49,7 +49,8 @@ public class Ex1 {
         
        return a; 
     }
-
+   
+    // calculo da media
     public static float calCular(int[] array) {
         
         float m = 0;
