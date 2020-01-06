@@ -13,18 +13,25 @@ public class Ex8 {
     public static void main(String[]args) throws IOException
     {
         int []arrayA = new int[10];
+        
         arrayA = criarArray();
+        
         visualizarArray(arrayA);
+        
         int soma = calcular(arrayA);
+        
         System.out.println("O valor da soma eh:"+soma);
         
     }        
     
      public static int[] criarArray() throws IOException {
+         
         BufferedReader p = new BufferedReader(new InputStreamReader(System.in));
+        
         int []a = new int[10];
         
         System.out.println("Introduza numeros inteiros");
+        
         for(int i=0;i<10;i++)
         {
             a[i]=Integer.parseInt(p.readLine());
@@ -35,7 +42,9 @@ public class Ex8 {
     }
      
      public static void visualizarArray(int[] ar) {
+         
       for(int i=0;i<ar.length;i++)
+          
       {  
         System.out.print(ar[i]+";");
       }
@@ -45,7 +54,9 @@ public class Ex8 {
 }
 
     public static int calcular(int[] arrayA) {
+        
         int somar=0;
+        
         for(int i=0;i<arrayA.length;i++)
         {
             somar =somar+ arrayA[i];
