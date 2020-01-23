@@ -12,23 +12,33 @@ import java.io.*;
 public class Ex7 {
     public static void main(String[]args) throws IOException
     {
-        int []arrayA = new int[10];
-        arrayA = criarArray();
-        int[]arrayB = new int[10];
-        arrayB = criarArray();
+        
+        int n = 2;
+        
+        int []arrayA = new int[n];
+        
+        arrayA = criarArray(n);
+        
+        int[]arrayB = new int[n];
+        
+        arrayB = criarArray(n);
+        
         visualizarArray(arrayB);
+        
         int []arrayC = new int[arrayB.length];
+        
         arrayC = criarArrayC(arrayA,arrayB);
+        
         visualizarArrayC(arrayC);
         
     }        
 
-    public static int[] criarArray() throws IOException {
+    public static int[] criarArray(int n) throws IOException {
         BufferedReader p = new BufferedReader(new InputStreamReader(System.in));
-        int []a = new int[10];
+        int []a = new int[n];
         
         System.out.println("Introduza numeros inteiros");
-        for(int i=0;i<10;i++)
+        for(int i=0;i<n;i++)
         {
             a[i]=Integer.parseInt(p.readLine());
         }
@@ -50,6 +60,7 @@ public class Ex7 {
 
     public static int[] criarArrayC(int[] a, int[] b) {
         int c [] = new int[a.length];
+        
         for(int i=0;i<c.length;i++)
         {
             c [i] = a[i]+b[i];
